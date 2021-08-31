@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+
+    <div class="contianer">
+        <header class="row header">
+            <h1 class="col-md-12">Weather Dashboard</h1>
+        </header>
+    </div>
+
+    <div class="row  no-gutters"></div>
+
+    <div class="row">
+        <div class="col-12 col-lg-3 p-4 p-lg-3 search-row">
+            <h2 class="search-title">Search For A City:</h2>
+            <input type="text" class="col-12 search-city" id="search-city">
+            <button class="col-12 search-btn" id="search-btn">Search</button>
+        </div>
+    </div>
+
+    <main class="col-12 col-lg-9 d-flex flex-column">
+
+        <div class="m-5 row justiy-content-around">
+
+            <div class="col-12 col-md-6 col-xl-3 mb-3 current-city" id="current-city">
+                <h2 id="city-name" class="city-name">text</h2>
+                <h4 class="temp" id="temp">Temp:</h4>
+                <h4 class="wind" id="wind">Wind:</h4>
+                <h4 class="humidity" id="humidity">Humidity:</h4>
+                <h4 class="uvindex" id="uvindex">UV Index:</h4>
+            </div>
+
+
+
+        </div>
+    </main>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./assets/styles.css"></script>
+</body>
+
+</html>
