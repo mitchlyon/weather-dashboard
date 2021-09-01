@@ -10,17 +10,37 @@
     text-align: center;
 }
 .search-title {
-    background: chartreuse;
+    
 }
 .search-city {
     text-align: center;
-    
+    border-radius: 5px;  
 }
 
 .search-btn {
     background: lightblue;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.line {
+    border-bottom: 2px solid black;
+    display: block;
+    margin: 20px 0 10px 0;
 }
 
 .current-city {
-    background: grey;
+    border: solid 2px;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.right-column {
+    margin: auto;
+}
+
+.forcast {
+    background: lightgrey;
+    margin-right: auto;
+    margin-top: 10px;
 }
