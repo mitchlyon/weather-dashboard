@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
     <link rel="stylesheet" href="./assets/styles.css">
     <title>Weather Dashboard</title>
+
 </head>
 
 <body>
@@ -26,21 +27,23 @@
         <div class="row">
             <div class="col-12 col-lg-10 p-4 p-lg-3 search-row">
                 <h2 class="search-title">Search For A City:</h2>
-                <input type="text" class="col-12 search-city" id="search-city">
-                <button class="col-12 search-btn" id="search-btn">Search</button>
+                <input type="text" class="col-12 search-city" name="search-city" id="search-city" value="London">
+                <button class="col-12 search-btn" id="search-btn" onclick="getCity()">Search</button>
                 <span class="col-12 line"></span>
+                
+
             </div>
-            
+
         </div>
 
         <main class="col-12 col-lg-9 d-flex flex-column right-column">
 
             <div class=" m-3 row ">
 
-                <div class="col-12 col-md-9 col-xl-12 mb-3 current-city" id="current-city">
-                    <h2 id="city-name" class="city-name">text</h2>
+                <div class="col-12 col-md-9 col-xl-12 mb-3 current-weather" id="current-city">
+                    <h2 id="current-city" class="city-name"></h2>
                     <h4 class="temp" id="temp">Temp:</h4>
-                    <h4 class="wind" id="wind">Wind:</h4>
+                    <h4 class="wind" id="wind">Wind Speed:</h4>
                     <h4 class="humidity" id="humidity">Humidity:</h4>
                     <h4 class="uvindex" id="uvindex">UV Index:</h4>
                 </div>
@@ -48,44 +51,44 @@
                 <div class="col-12">
                     <h3>5-Day Forcast:</h3>
                 </div>
-                
-                <div class="col-2 forcast">
-                    <h5>date</h5>
-                    <img src="" alt="sun">
-                    <h6>Temp:</h6>
-                    <h6>Wind:</h6>
-                    <h6>Humidity:</h6>
-                </div>      
-                <div class="col-2 forcast">
-                    <h5>date</h5>
-                    <img src="" alt="sun">
-                    <h6>Temp:</h6>
-                    <h6>Wind:</h6>
-                    <h6>Humidity:</h6>
-                </div>      
-                <div class="col-2 forcast">
-                    <h5>date</h5>
-                    <img src="" alt="sun">
-                    <h6>Temp:</h6>
-                    <h6>Wind:</h6>
-                    <h6>Humidity:</h6>
-                </div>      
-                <div class="col-2 forcast">
-                    <h5>date</h5>
-                    <img src="" alt="sun">
-                    <h6>Temp:</h6>
-                    <h6>Wind:</h6>
-                    <h6>Humidity:</h6>
-                </div>      
-                <div class="col-2 forcast">
-                    <h5>date</h5>
-                    <img src="" alt="sun">
-                    <h6>Temp:</h6>
-                    <h6>Wind:</h6>
-                    <h6>Humidity:</h6>
-                </div>      
 
-             
+                <div class="col-2 forcast">
+                    <h5 class="date1" id="date1">Date:</h5>
+                    <img id="img1" src="" alt="sun">
+                    <h6 class="temp1" id="temp1">Temp:</h6>
+                    <h6 class="wind1" id="wind1">Wind:</h6>
+                    <h6 class="humidity1" id="humidity1">Humidity:</h6>
+                </div>
+                <div class="col-2 forcast">
+                    <h5 class="date2" id="date2">Date:</h5>
+                    <img id="img2" src="" alt="sun">
+                    <h6 class="temp2" id="temp2">Temp:</h6>
+                    <h6 class="wind2" id="wind2">Wind:</h6>
+                    <h6 class="humidity2" id="humidity2">Humidity:</h6>
+                </div>
+                <div class="col-2 forcast">
+                    <h5 class="date3" id="date3">Date:</h5>
+                    <img id="img3" src="" alt="sun">
+                    <h6 class="temp3" id="temp3">Temp:</h6>
+                    <h6 class="wind3" id="wind3">Wind:</h6>
+                    <h6 class="humidity3" id="humidity3">Humidity:</h6>
+                </div>
+                <div class="col-2 forcast">
+                    <h5 class="date4" id="date4">Date:</h5>
+                    <img id="img4" src="" alt="sun">
+                    <h6 class="temp4" id="temp4">Temp:</h6>
+                    <h6 class="wind4" id="wind4">Wind:</h6>
+                    <h6 class="humidity4" id="humidity4">Humidity:</h6>
+                </div>
+                <div class="col-2 forcast">
+                    <h5 class="date5" id="date5">Date:</h5>
+                    <img id="img5" src="" alt="sun">
+                    <h6 class="temp5" id="temp5">Temp:</h6>
+                    <h6 class="wind5" id="wind5">Wind:</h6>
+                    <h6 class="humidity5" id="humidity5">Humidity:</h6>
+                </div>
+                
+
 
 
 
@@ -94,13 +97,11 @@
     </div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="./assets/styles.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
